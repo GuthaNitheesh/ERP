@@ -1,0 +1,43 @@
+p, tech, users, read
+p, tech, users, write
+p, tech, users, delete
+p, tech, tenants, read
+p, tech, tenants, write
+p, tech, tenants, delete
+p, tech, roles, read
+p, tech, roles, write
+p, tech, roles, delete
+p, tech, rfqs, read
+p, tech, rfqs, write
+p, tech, rfqs, delete
+p, tech, quotes, read
+p, tech, quotes, write
+p, tech, quotes, delete
+
+p, admin, users, read
+p, admin, users, write
+p, admin, tenants, read
+p, admin, tenants, write
+p, admin, roles, read
+p, admin, roles, write
+p, admin, rfqs, read
+p, admin, rfqs, write
+p, admin, quotes, read
+p, admin, quotes, write
+
+p, customer_admin, users, read
+p, customer_admin, users, write
+p, customer_admin, roles, read
+p, customer_admin, roles, write
+p, customer_admin, rfqs, read
+p, customer_admin, rfqs, write
+p, customer_admin, quotes, read
+
+p, vendor_admin, users, read
+p, vendor_admin, users, write
+p, vendor_admin, roles, read
+p, vendor_admin, roles, write
+p, vendor_admin, rfqs, read
+p, vendor_admin, quotes, read
+p, vendor_admin, quotes, write
+

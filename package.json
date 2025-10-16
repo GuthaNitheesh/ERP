@@ -1,0 +1,46 @@
+{
+  "name": "euroasiangroup-erp",
+  "version": "1.0.0",
+  "description": "High-load production-ready SaaS ERP platform for maritime procurement",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "setup:portals": "./setup-portals.sh",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:tech": "npm run dev --workspace=frontend/tech-portal",
+    "dev:admin": "npm run dev --workspace=frontend/admin-portal",
+    "dev:customer": "npm run dev --workspace=frontend/customer-portal",
+    "dev:vendor": "npm run dev --workspace=frontend/vendor-portal",
+    "build:backend": "npm run build --workspace=backend",
+    "build:tech": "npm run build --workspace=frontend/tech-portal",
+    "build:admin": "npm run build --workspace=frontend/admin-portal",
+    "build:customer": "npm run build --workspace=frontend/customer-portal",
+    "build:vendor": "npm run build --workspace=frontend/vendor-portal",
+    "build:shared": "npm run build --workspace=packages/shared-components",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "seed": "npm run seed --workspace=backend",
+    "seed:complete": "npm run seed:complete --workspace=backend",
+    "test": "npm run test --workspaces"
+  },
+  "keywords": [
+    "erp",
+    "saas",
+    "maritime",
+    "procurement",
+    "rbac",
+    "casbin"
+  ],
+  "author": "EuroAsianNGroup",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
+
