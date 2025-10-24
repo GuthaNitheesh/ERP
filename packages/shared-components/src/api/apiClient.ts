@@ -41,18 +41,22 @@ export class ApiClient {
     );
 
     // Response interceptor
-    this.client.interceptors.response.use(
-      (response) => response,
-      (error: AxiosError) => {
-        const apiError: ApiError = {
-          message: error.response?.data?.message || error.message || 'An error occurred',
-          statusCode: error.response?.status,
-          data: error.response?.data,
-        };
+  this.client.interceptors.response.use(
+  (response) => response,
+  (error: AxiosError) => {
+    // Safely handle cases where data might not have 'message'
+    const errorData = error.response?.data as { message?: string } | undefined;
 
-        return Promise.reject(apiError);
-      }
-    );
+    const apiError: ApiError = {
+      message: errorData?.message || error.message || 'An error occurred',
+      statusCode: error.response?.status,
+      data: error.response?.data,
+    };
+
+    return Promise.reject(apiError);
+  }
+);
+
   }
 
   async get<T = any>(url: string, config?: AxiosRequestConfig): Promise<T> {
