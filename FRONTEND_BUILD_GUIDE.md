@@ -240,7 +240,6 @@ npm run dev
 ---
 
 ### Step 3: Add Portal-Specific Pages
-
 For each portal, add the specific pages they need (see requirements above).
 
 ---
